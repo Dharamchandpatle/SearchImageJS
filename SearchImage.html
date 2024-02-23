@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Webpage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <!-- Link Tailwind CSS -->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <style>
+        
+.btn{
+    background-image:linear-gradient(to left, #ff0000 0%, #c6019a 51%, #ff0000 100%) ;
+    color: var(--font-color);
+}
+     </style>
+</head>
+
+<body>
+    <!-- <h1>Welcome to My Webpage</h1>
+
+
+    <h1>Fetching Single Image via the Unsplash API</h1>
+    <input type="text" id="search" placeholder="Search for Images" />
+    <button id="submit">Submit</button>
+
+
+    <div id="image">    
+
+        
+    </div> -->
+
+    <section class="shadow-lg font-serif shadow-lg " style="background-image: url(https://images.unsplash.com/photo-1665707888808-d44ad6ff690d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+        <div class="max-w-6xl px-4 mx-auto" x-data="{open:false}">
+            <nav class="flex items-center justify-between py-4">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-[#fe9901] "><span class="text-[#ffffff]">Dharam's</span> Dev</span>
+
+                <div class="flex lg:hidden">
+                    <button
+                        class="flex items-center px-3 py-2 text-blue-600 border border-blue-200 rounded dark:text-gray-400 hover:text-blue-800 hover:border-blue-300 lg:hidden"
+                        @click="open =true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden lg:w-auto lg:space-x-12 lg:items-center lg:flex ">
+                    <li><a href="" class="text-sm font-semibold dark:text-gray-800 ">Home</a>
+                    </li>
+                    <li><a href="" class="text-sm font-semibold dark:text-gray-800 ">Explore </a>
+                    </li>
+                    <li><a href="" class="text-sm font-semibold dark:text-gray-800 ">Advertise </a>
+                    </li>
+                   
+                </ul>
+                <div class="items-center hidden pl-2 ml-auto mr-8 lg:flex lg:ml-0 lg:mr-0">
+                    <div class="flex px-11 py-2 border border-[#FF0000] rounded-full dark:border-gray-900">
+                        <input type="text" id="search" 
+                            class="w-full pr-4 text-xl text-gray-900  font-semibold bg-transparent dark:text-gray-900 placeholder-text-800 "
+                            placeholder="search...">
+                        <button id="submit"
+                            class="flex items-center text-gray-900 dark:text-gray-900 dark:hover:text-[#000] hover:text-[#000]">
+                            <span class="mr-1 ml-2 text-[#ffffff] font-bold">Search </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="py-20 pr-24 pt-[11rem] "  data-aos="fade-down" data-aos-delay="100" data-aos-duration="2000">
+                <div class="max-w-6xl px-4 mx-auto md:px-0 font-poppins">
+                    <div class="flex flex-wrap items-center px-4">
+                        <div class="w-full px-4 mb-16 md:w-1/2 md:mb-0">
+                            <span
+                                class="inline-block mb-4 text-lg font-semibold leading-none border-l-8 text-red-500 capitalize dark:text-[var(--btn-bg-color)]">
+                                Wallpaper's World's
+                            </span>
+                            <h2
+                                class="mb-6 text-7xl  leading-tight tracking-tight text-[var(--font-color)]  dark:text-[var(--font-color)]   md:text-5xl lg:text-7xl">
+                                Wallpaper's
+                            </h2>
+                            <p class="mb-6 font-medium tracking-wide text-[var(--para-color)] dark:text-[var(--para-color)] md:text-lg">
+                                A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                Success is most important part of life and it is determination of having achieved .
+                            </p>
+                            <a href="" class="mr-4 ">
+                                <button class="btn inline-flex uppercase items-center justify-center px-8 py-3 ">Watch More Wallpaper's</button>
+                            </a>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+    </section>
+<div class="text-center bg-[#130f1a] text-2xl font-bold text-[#ffffff] py-20 font-serif">
+    <h1>You Can DOwnload More Walpaper's </h1>
+</div>
+      <div id="image" class=" grid grid-cols-5 gap-[1rem] pt-[3rem] h-full w-full bg-[#130f1a] ">    
+
+        
+    </div>
+
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
